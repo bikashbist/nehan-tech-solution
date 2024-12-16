@@ -1,0 +1,147 @@
+body {
+    background-color: #f2f2f2;
+    font-family: "PT Sans", sans-serifm;
+}
+
+.bg-gray-color {
+    background: #d4946d !important;
+}
+
+.bg-red-color {
+    background-color: #d01f29 !important;
+}
+
+.bg-blue-color {
+    background: #5fc5d4 !important;
+}
+
+.bg-sky-color {
+    background: #3ab4f1 !important;
+}
+
+.header {
+    .logo {
+        a {
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
+            color: #333333;
+        }
+    }
+
+    .menu {
+        button {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+           
+            font-weight: 600;
+            border: none;
+        }
+    }
+}
+
+.banner {
+    h1 {
+        color: #333;
+        font-size: 5em;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+
+    p {
+        font-size: 24px;
+
+        strong {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        a {
+            
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+
+        }
+    }
+}
+
+.project {
+    h3 {
+        font-size: 2.5em;
+        line-height: 70px;
+        letter-spacing: 5px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 0px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        border-bottom: 2px solid #fff;
+    }
+
+    &__content {
+        background: #5fc5d4;
+        padding: 10px 30px;
+
+        &.left-side {
+            background: #5fc5d4;
+            padding: 50px 50px;
+            margin-left: -150px;
+        }
+
+        &.right-side {
+            background: #5fc5d4;
+            padding: 50px 50px;
+            margin-right: -150px;
+            z-index: 1;
+        }
+
+    }
+}
+
+.testimonials {
+    h1 {
+        text-align: center;
+        font-size: 4em;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        color: #fff;
+
+        strong {
+            font-size: 1.5em;
+            line-height: 32px;
+            color: #fff;
+        }
+    }
+}
+
+.more-work {
+    p {
+        font-size: 24px;
+        font-weight: 400;
+
+        a {
+            color: #333333;
+            text-decoration: none;
+            border-bottom: 2px solid #3ab4f1;
+            padding: 5px 10px 5px 10px;
+        }
+    }
+}
