@@ -1,6 +1,8 @@
 body {
   background-color: #f2f2f2;
   font-family: "PT Sans", sans-serifm;
+  font-family: "Rubik", serif;
+  font-size: 1.125rem;
 }
 
 .bg-gray-color {
@@ -16,7 +18,45 @@ body {
 }
 
 .bg-sky-color {
-  background: #3ab4f1 !important;
+  background: #4caf50 !important;
+}
+
+.bg-whatsapp-color {
+  background-color: #25d366;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio (height / width * 100) */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
+
+.font-style-logo {
+  font-family: "Rubik", serif;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  color: #112868;
+  font-size: 26px;
+}
+
+.contact-us a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Rubik", serif;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 16px;
 }
 
 .header .logo a {
@@ -33,19 +73,37 @@ body {
   border: none;
 }
 
+.navbar .nav-link {
+  color: #333333;
+  font-size: 18px;
+  margin: 0px 10px;
+  font-family: "Rubik", serif;
+}
+
+.banner {
+  background-image: url(../images/banner.jpg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner__details {
+  height: 100%;
+  height: 700px;
+}
 .banner h1 {
-  color: #333;
-  font-size: 5em;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 5px;
+  font-size: 4em;
+  font-family: "Rubik", serif;
+  font-weight: 500;
+  letter-spacing: 0px;
 }
 .banner p {
-  font-size: 24px;
+  font-family: "Rubik", serif;
 }
 .banner p strong {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 400;
+  font-family: "Rubik", serif;
 }
 .banner p a {
   text-decoration: none;
@@ -54,37 +112,62 @@ body {
   border-radius: 30px;
 }
 
-.project h3 {
-  font-size: 2.5em;
-  line-height: 70px;
-  letter-spacing: 5px;
+.title h1 {
+  color: #112868;
+  font-size: 3.0625rem;
+  line-height: 59px;
+  font-weight: 500;
 }
-.project p {
-  font-size: 1.2rem;
-  line-height: 2rem;
+.title p {
+  font-size: 16px;
 }
-.project a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 0px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  border-bottom: 2px solid #fff;
+
+.about-us__website {
+  background-color: #112868;
 }
-.project__content {
-  background: #5fc5d4;
-  padding: 10px 30px;
+.about-us__it {
+  background: #0f5fdc;
+  background-image: url(../images/hpe-acquisition-banner.avif);
 }
-.project__content.left-side {
-  background: #5fc5d4;
-  padding: 50px 50px;
-  margin-left: -150px;
+.about-us__application {
+  background-image: url(../images/banner.jpg);
 }
-.project__content.right-side {
-  background: #5fc5d4;
-  padding: 50px 50px;
-  margin-right: -150px;
+
+.projets__details {
+  position: relative;
+  background: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: #000;
+  transition: color 0.3s ease;
+}
+.projets__details .text-content {
+  position: relative;
+  z-index: 2;
+}
+.projets__details.active {
+  background-image: url(../images/banner.jpg);
+  color: white;
+}
+.projets__details::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: left 0.5s ease-in-out;
   z-index: 1;
+}
+.projets__details:hover {
+  color: #fff;
+}
+.projets__details:hover::before {
+  left: 0;
 }
 
 .testimonials h1 {

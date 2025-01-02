@@ -1,6 +1,8 @@
 body {
     background-color: #f2f2f2;
     font-family: "PT Sans", sans-serifm;
+    font-family: "Rubik", serif;
+    font-size: 1.125rem;
 }
 
 .bg-gray-color {
@@ -16,7 +18,47 @@ body {
 }
 
 .bg-sky-color {
-    background: #3ab4f1 !important;
+    background: #4caf50 !important;
+}
+
+.bg-whatsapp-color {
+    background-color: #25d366;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio (height / width * 100) */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
+.font-style-logo {
+    font-family: "Rubik", serif;
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    color: #112868;
+    font-size: 26px;
+}
+
+.contact-us {
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-family: "Rubik", serif;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 16px;
+    }
 }
 
 .header {
@@ -34,32 +76,53 @@ body {
             height: 70px;
             width: 70px;
             border-radius: 50%;
-           
+
             font-weight: 600;
             border: none;
         }
     }
 }
 
+.navbar {
+    .nav-link {
+        color: #333333;
+        font-size: 18px;
+        margin: 0px 10px;
+        font-family: "Rubik", serif;
+
+    }
+}
+
 .banner {
+    background-image: url(../images/banner.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__details {
+        height: 100%;
+        height: 700px;
+    }
+
     h1 {
-        color: #333;
-        font-size: 5em;
-        font-weight: 700;
-        text-align: center;
-        letter-spacing: 5px;
+        font-size: 4em;
+        font-family: "Rubik", serif;
+        font-weight: 500;
+        letter-spacing: 0px;
     }
 
     p {
-        font-size: 24px;
+       
+        font-family: "Rubik", serif;
 
         strong {
-            font-size: 48px;
-            font-weight: 700;
+            font-size: 26px;
+            font-weight: 400;
+            font-family: "Rubik", serif;
         }
 
         a {
-            
+
             text-decoration: none;
             color: #fff;
             padding: 10px 20px;
@@ -69,46 +132,76 @@ body {
     }
 }
 
-.project {
-    h3 {
-        font-size: 2.5em;
-        line-height: 70px;
-        letter-spacing: 5px;
+.title {
+    h1 {
+        color: #112868;
+        font-size: 3.0625rem;
+        line-height: 59px;
+        font-weight: 500;
     }
-
-    p {
-        font-size: 1.2rem;
-        line-height: 2rem;
-    }
-
-    a {
-        text-decoration: none;
-        display: inline-block;
-        padding: 10px 0px;
-        font-size: 1.2rem;
-        font-weight: 700;
-        border-bottom: 2px solid #fff;
-    }
-
-    &__content {
-        background: #5fc5d4;
-        padding: 10px 30px;
-
-        &.left-side {
-            background: #5fc5d4;
-            padding: 50px 50px;
-            margin-left: -150px;
-        }
-
-        &.right-side {
-            background: #5fc5d4;
-            padding: 50px 50px;
-            margin-right: -150px;
-            z-index: 1;
-        }
-
+    p{
+        font-size: 16px;
     }
 }
+.about-us{
+    &__website{
+        background-color: #112868;
+    }
+    &__it{
+        background: #0f5fdc;
+        background-image: url(../images/hpe-acquisition-banner.avif);
+    }
+    &__application{
+        background-image: url(../images/banner.jpg);
+    }
+}
+
+.projets {
+    &__details {
+      position: relative; // Necessary for positioning the pseudo-element
+      background: white;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      color: #000;
+      transition: color 0.3s ease;
+  
+      // Text container to ensure text stays above the pseudo-element
+      .text-content {
+        position: relative;
+        z-index: 2; // Place text above the pseudo-element
+      }
+      &.active{
+        background-image: url(../images/banner.jpg);
+        color: white;
+      }
+  
+      // Pseudo-element for the sliding image
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%; // Start off-screen
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/banner.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: left 0.5s ease-in-out;
+        z-index: 1; // Ensure this is behind the text
+      }
+  
+      &:hover {
+        color: #fff; // Optional text color change
+  
+        &::before {
+          left: 0; // Slide the image into view
+        }
+      }
+    }
+  }
+  
+  
 
 .testimonials {
     h1 {
